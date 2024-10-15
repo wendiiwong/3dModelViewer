@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>3D Object Viewer</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<label>
+		Testing Mode : <input type="checkbox" id="testing-toggle">
+	</label>
+	<div class="sidebar">
+		<div class="title">Model Information</div>
+		<div class="content" style="display:grid">
+			<div class="grid_item">
+				<label>Name:</label>
+				<label id="grid_item_content">N/A</label>
+			</div>
+			<div class="grid_item">
+				<!-- Mode selection with toggles -->
+				<div class="mode-controls">
+					<h4>Display Modes: </h4>
+
+					<div class="toggle-switch">
+						<label for="polygon-toggle">Polygon</label>
+						<input type="checkbox" id="polygon-toggle" class="toggle">
+					</div>
+
+					<div class="toggle-switch">
+						<label for="wireframe-toggle">Wireframe</label>
+						<input type="checkbox" id="wireframe-toggle" class="toggle">
+					</div>
+
+					<div class="toggle-switch">
+						<label for="points-toggle">Points</label>
+						<input type="checkbox" id="points-toggle" class="toggle">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<script type="module" src="./modules/world.js"></script>
+	</div>
+</body>
+
+</html>

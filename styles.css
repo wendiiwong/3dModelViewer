@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  display: flex;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* ------------ left sidebar ------------*/
+.sidebar {
+  width: 30%;
+  background-color: #333;
+  color: white;
+}
+
+.sidebar .title {
+  width: 100%;
+  margin: 0;
+  background: whitesmoke;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+}
+
+.sidebar .content {
+  padding: 10px;
+  background-color: inherit;
+}
+
+.grid_item {
+  display: inline-grid;
+  grid-auto-flow: row;
+  align-content: center;
+  align-self: stretch;
+  min-height: 23px;
+  font-weight: bold;
+}
+
+.grid_item_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+/* ------------ toggle switch ------------*/
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: #ccc;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle:checked {
+  background-color: #4caf50;
+}
+
+.toggle:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s ease;
+}
+
+.toggle:checked:before {
+  transform: translateX(20px);
+}
+
+/* ------------ content (3D canvas area) ------------*/
+.content {
+  flex: 1;
+  background-color: #000;
+  position: relative;
+}
